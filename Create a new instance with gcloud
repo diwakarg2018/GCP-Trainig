@@ -38,3 +38,5 @@ gcloud compute instances create "my-vm-2" \
 --image-project "debian-cloud" \
 --image-family "debian-10" \
 --subnet "default"
+
+gcloud compute reset-windows-password [instance] --zone us-central1-a --user [username]
