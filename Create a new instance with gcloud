@@ -32,3 +32,9 @@ gcloud compute reset-windows-password instance-1 --zone us-central1-a --user adm
 gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-c
 gcloud compute instances create --help
 gcloud compute ssh gcelab2 --zone us-central1-c
+
+gcloud compute instances create "my-vm-2" \
+--machine-type "n1-standard-1" \
+--image-project "debian-cloud" \
+--image-family "debian-10" \
+--subnet "default"
