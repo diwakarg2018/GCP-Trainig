@@ -1,0 +1,20 @@
+Run the following commands in the SSH window to set up Apache2 HTTP Server:
+
+sudo apt-get update
+sudo apt-get install apache2 php7.0
+sudo service apache2 restart
+Install agents on the VM:
+Run the Monitoring agent install script command in the SSH terminal of your VM instance to install the Cloud Monitoring agent.
+
+curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh
+sudo bash add-monitoring-agent-repo.sh
+sudo apt-get update
+sudo apt-get install stackdriver-agent
+When asked if you want to continue, enter Y.
+
+Run the Logging agent install script command in the SSH terminal of your VM instance to install the Cloud Logging agent
+
+curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
+sudo bash add-logging-agent-repo.sh
+sudo apt-get update
+sudo apt-get install google-fluentd
