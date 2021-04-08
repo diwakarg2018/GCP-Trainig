@@ -1,0 +1,34 @@
+In the Cloud Shell, use gcloud to create a new virtual machine instance from the command line:
+gcloud auth list
+gcloud config list project
+Set the default region and zone for all resources
+gcloud config set compute/zone us-central1-a
+gcloud config set compute/region us-central1
+gcloud compute project-info describe --project <your_project_ID>
+export PROJECT_ID=qwiklabs-gcp-01-f34f0786c601
+export ZONE=us-central1-a
+echo $PROJECT_ID
+echo $ZONE
+gcloud compute instances create Apache --machine-type n1-standard-2 --zone $ZONE
+gcloud compute instances create --help
+Note: Press ENTER or the spacebar to scroll through the help content. To exit the content, type Q.
+gcloud -h
+gcloud config --help
+type q
+gcloud help config
+type q
+gcloud config list --all
+gcloud components list
+sudo apt-get install google-cloud-sdk
+gcloud beta interactive
+gcloud compute instances describe gcelab2
+gcloud compute ssh gcelab2 --zone $ZONE
+cd $HOME
+vi ./.bashrc
+
+gcloud compute instances get-serial-port-output instance-1
+gcloud compute reset-windows-password instance-1 --zone us-central1-a --user admin
+
+gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-c
+gcloud compute instances create --help
+gcloud compute ssh gcelab2 --zone us-central1-c
